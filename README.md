@@ -77,14 +77,14 @@ You may post messages to the `#tutorial-intro-to-numerical-computing-with-numpy`
 
   - To create an Anaconda environment from an existing `environment.yml` file:
 
-  ```
-  $ conda env create -f environment.yml -n numpy-tutorial
-  ```
+    ```
+    $ conda env create -f environment.yml -n numpy-tutorial
+    ```
 
   - To remove an existing Anaconda environment:
 
-  ```
-  $ conda remove --name numpy-tutorial --all
-  ```
+    ```
+    $ conda remove --name numpy-tutorial --all
+    ```
 
 - To completely uninstall Anaconda, see the "Uninstalling Anaconda" documentation [here](https://docs.anaconda.com/anaconda/install/uninstall/). 
