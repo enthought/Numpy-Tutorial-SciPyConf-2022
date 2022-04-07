@@ -88,3 +88,12 @@ You may post messages to the `#tutorial-intro-to-numerical-computing-with-numpy`
     ```
 
 - To completely uninstall Anaconda, see the "Uninstalling Anaconda" documentation [here](https://docs.anaconda.com/anaconda/install/uninstall/). 
+
+
+© 2001-2021, Enthought, Inc.
+All Rights Reserved. Use only permitted under license. Copying, sharing, redistributing or other unauthorized use strictly prohibited.
+All trademarks and registered trademarks are the property of their respective owners.
+Enthought, Inc.
+200 W Cesar Chavez Suite 202
+Austin, TX 78701
+www.enthought.com
