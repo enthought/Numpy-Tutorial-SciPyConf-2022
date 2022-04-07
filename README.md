@@ -22,12 +22,12 @@ If you don't already have a working python distribution, you may download Anacon
 
 To be able to run the examples, demos and exercises, you must have the following packages installed:
 
-- ipython 7.16+ (for running, experimenting and doing exercises)
-- jupyter 1.0+
-- matplotlib 3.3+
-- numpy 1.17+
-- pillow 7.2+
-- pyqt 5.9+
+- `ipython` (for running, experimenting, and doing exercises)
+- `jupyter` (for access to the Jupyter Notebook web-based interactive computing platform)
+- `matplotlib`
+- `numpy`
+- `pillow`
+- `pyqt`
 
 If you are using Anaconda, you can use the Anaconda Prompt (Windows) or Terminal.app (macOS) to create an environment with the necessary packages:
 
@@ -48,7 +48,9 @@ If you are using Anaconda, you can use the Anaconda Prompt (Windows) or Terminal
     $ python check_env.py
     ```
 
-You should see a window pop up with a plot that looks vaguely like a smiley face.
+You should see a window pop up with a plot that looks vaguely like a smiley face (as shown below).
+
+![](assets/images/check_env_output.png)
 
 ## Download Tutorial Materials
 
@@ -68,3 +70,21 @@ It will create a new folder named `Numpy-Tutorial-SciPyConf-2022/` with all the 
 ## Questions? Problems?
 
 You may post messages to the `#tutorial-intro-to-numerical-computing-with-numpy` Slack channel for this tutorial at in the official Slack team: [https://scipy2022.slack.com](https://scipy2022.slack.com) .
+
+
+## Additional Anaconda Resources
+- [Managing environments](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html)
+
+  - To create an Anaconda environment from an existing `environment.yml` file:
+
+  ```
+  $ conda env create -f environment.yml -n numpy-tutorial
+  ```
+
+  - To remove an existing Anaconda environment:
+
+  ```
+  $ conda remove --name numpy-tutorial --all
+  ```
+
+- To completely uninstall Anaconda, see the "Uninstalling Anaconda" documentation [here](https://docs.anaconda.com/anaconda/install/uninstall/). 
