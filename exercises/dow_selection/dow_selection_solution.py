@@ -1,4 +1,12 @@
 """
+© 2001-2021, Enthought, Inc.
+All Rights Reserved. Use only permitted under license. Copying, sharing, redistributing or other unauthorized use strictly prohibited.
+All trademarks and registered trademarks are the property of their respective owners.
+Enthought, Inc.
+200 W Cesar Chavez Suite 202
+Austin, TX 78701
+www.enthought.com
+
 
 Topics: Boolean array operators, sum function, where function, plotting.
 
