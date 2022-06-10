@@ -2,7 +2,7 @@
 
 #### Presented by: Logan Thomas, [Enthought, Inc.](https://www.enthought.com)
 
-This repository contains all the material needed by students registered for the Numpy tutorial of SciPy 2022 on Monday, July 11th 2021.
+This repository contains all the material needed by students registered for the Numpy tutorial of [SciPy 2022](https://www.scipy2022.scipy.org/) on Monday, July 11th 2022.
 
 For a smooth experience, you will need to make sure that you install or update your Python distribution and download the tutorial material _before_ the day of the tutorial.
 
@@ -90,7 +90,7 @@ You may post messages to the `#tutorial-intro-to-numerical-computing-with-numpy`
 - To completely uninstall Anaconda, see the "Uninstalling Anaconda" documentation [here](https://docs.anaconda.com/anaconda/install/uninstall/). 
 
 
-© 2001-2021, Enthought, Inc.
+© 2001-2022, Enthought, Inc.
 All Rights Reserved. Use only permitted under license. Copying, sharing, redistributing or other unauthorized use strictly prohibited.
 All trademarks and registered trademarks are the property of their respective owners.
 Enthought, Inc.
