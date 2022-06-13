@@ -35,16 +35,28 @@ If you are using Anaconda, you can use the Anaconda Prompt (Windows) or Terminal
     - **Windows**: Click Start and search for "Anaconda Prompt". Click on the application to launch a new Anaconda Prompt window.
     - **macOS**: Open Spotlight Search (using Cmd+Space) and type "Terminal.app". Click on the application to launch a new Terminal.app window.   
 
-2. Create a new Anaconda virtual environment by executing the below command in the application window you opened in step 1 above.
+1. Create a new Anaconda virtual environment by executing the below command in the application window you opened in step 1 above. You may be prompted to `Proceed([y]/n)?`. If so, type `y` and press `Enter`.
 
     ```
     $ conda create -n numpy-tutorial ipython jupyter matplotlib numpy pillow pyqt 
     ```
 
-3. To test your installation, please execute the `check_env.py` script in the environment where you have installed the requirements. If you created an Anaconda environment using the instructions above, keep the application window that you opened in step 1 active (or launch the platform specific application again -- Anaconda Prompt for Windows or Terminal.app for macOS), navigate to where you have this GitHub repository, and type:
+1. Navigate to the directory where you'd like to store materials for this tutoiral and download the materials from this GitHub repository by executing the below command. It will create a new folder named `Numpy-Tutorial-SciPyConf-2022/` with all the content you will need.
 
     ```
+    $ git clone git@github.com:enthought/Numpy-Tutorial-SciPyConf-2022.git
+    ```
+    **NOTE**: If you are not familiar with Git, you can download a zipped archive of the material by clicking on this link: https://github.com/enthought/Numpy-Tutorial-SciPyConf-2022/archive/main.zip. Then, and unpack the zipped archive into a directoy named `Numpy-Tutorial-SciPyConf-2022/`. You may have to rename the unpacked directory to explicitly be `Numpy-Tutorial-SciPyConf-2022/`.
+
+
+1. To test your installation, please execute the `check_env.py` script in the python virtual environment where you have installed the requirements (from step 2 above). If you created an Anaconda environment using the instructions above, you can use the same application window that you opened in step 1, or launch the platform specific application again -- Anaconda Prompt for Windows or Terminal.app for macOS. Be sure to navigate to where you downloaded this GitHub repository and activate your conda environment *before* executing `python check_env.py`:
+
+    ```
+    # Example path to course materials (yours may differ)
+    $ cd ~/Desktop/Numpy-Tutorial-SciPyConf-2022/
+    
     $ conda activate numpy-tutorial
+    
     $ python check_env.py
     ```
 
@@ -52,9 +64,9 @@ You should see a window pop up with a plot that looks vaguely like a smiley face
 
 ![](assets/images/check_env_output.png)
 
-## Download Tutorial Materials
+## Tutorial Materials
 
-This GitHub repository is all that is needed in terms of tutorial content. The simplest solution is to download the material using this link:
+This GitHub repository is all that is needed in terms of tutorial content. If you downloaded these materials in step 3 above, there is no need to do so again. If not, the simplest solution is to download the material using this link:
 
 https://github.com/enthought/Numpy-Tutorial-SciPyConf-2022/archive/main.zip
 
@@ -64,7 +76,7 @@ If you are familiar with Git, you can also clone this repository with:
 $ git clone https://github.com/enthought/Numpy-Tutorial-SciPyConf-2022.git
 ```
 
-It will create a new folder named `Numpy-Tutorial-SciPyConf-2022/` with all the content you will need: the slides I will go through (`introduction_to_numerical_computing_with_numpy_manual.pdf`), and a folder of exercises.
+The above command will create a new folder named `Numpy-Tutorial-SciPyConf-2022/` with all the content you will need: the slides I will go through (`introduction_to_numerical_computing_with_numpy_manual.pdf`), and a folder of exercises.
 
 
 ## Questions? Problems?
