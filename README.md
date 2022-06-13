@@ -61,9 +61,9 @@ You should see a window pop up with a plot that looks vaguely like a smiley face
 
 ![](assets/images/check_env_output.png)
 
-## Download Tutorial Materials
+## Tutorial Materials
 
-This GitHub repository is all that is needed in terms of tutorial content. The simplest solution is to download the material using this link:
+This GitHub repository is all that is needed in terms of tutorial content. If you downloaded these materials in step 3 above, there is no need to do so again. If not, the simplest solution is to download the material using this link:
 
 https://github.com/enthought/Numpy-Tutorial-SciPyConf-2022/archive/main.zip
 
@@ -73,7 +73,7 @@ If you are familiar with Git, you can also clone this repository with:
 $ git clone https://github.com/enthought/Numpy-Tutorial-SciPyConf-2022.git
 ```
 
-It will create a new folder named `Numpy-Tutorial-SciPyConf-2022/` with all the content you will need: the slides I will go through (`introduction_to_numerical_computing_with_numpy_manual.pdf`), and a folder of exercises.
+The above command will create a new folder named `Numpy-Tutorial-SciPyConf-2022/` with all the content you will need: the slides I will go through (`introduction_to_numerical_computing_with_numpy_manual.pdf`), and a folder of exercises.
 
 
 ## Questions? Problems?
