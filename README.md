@@ -35,7 +35,7 @@ If you are using Anaconda, you can use the Anaconda Prompt (Windows) or Terminal
     - **Windows**: Click Start and search for "Anaconda Prompt". Click on the application to launch a new Anaconda Prompt window.
     - **macOS**: Open Spotlight Search (using Cmd+Space) and type "Terminal.app". Click on the application to launch a new Terminal.app window.   
 
-1. Create a new Anaconda virtual environment by executing the below command in the application window you opened in step 1 above. You may be prompted to `Proceed([y]/n)?`. If so, type 'y' and press `Enter`.
+1. Create a new Anaconda virtual environment by executing the below command in the application window you opened in step 1 above. You may be prompted to `Proceed([y]/n)?`. If so, type `y` and press `Enter`.
 
     ```
     $ conda create -n numpy-tutorial ipython jupyter matplotlib numpy pillow pyqt 
