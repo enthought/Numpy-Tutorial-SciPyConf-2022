@@ -46,10 +46,13 @@ If you are using Anaconda, you can use the Anaconda Prompt (Windows) or Terminal
     ```
     $ git clone git@github.com:enthought/Numpy-Tutorial-SciPyConf-2022.git
     ```
-    **NOTE**: If you are not familiar with Git, you can download a zipped archive of the material by clicking on this link: https://github.com/enthought/Numpy-Tutorial-SciPyConf-2022/archive/main.zip. Then, and unpack the zipped archive into a directoy named `Numpy-Tutorial-SciPyConf-2022/`. You may have to rename the unpacked directory to explicitly be `Numpy-Tutorial-SciPyConf-2022/`.
+    **NOTE**: If you are not familiar with Git, you can download a zipped archive of the material by clicking on this link: https://github.com/enthought/Numpy-Tutorial-SciPyConf-2022/archive/main.zip. Then, unpack the zipped archive into a directoy named `Numpy-Tutorial-SciPyConf-2022`. You may have to rename the unpacked directory to explicitly be `Numpy-Tutorial-SciPyConf-2022`.
 
 
-1. To test your installation, please execute the `check_env.py` script in the python virtual environment where you have installed the requirements (from step 2 above). If you created an Anaconda environment using the instructions above, you can use the same application window that you opened in step 1, or launch the platform specific application again -- Anaconda Prompt for Windows or Terminal.app for macOS. Be sure to navigate to where you downloaded this GitHub repository and activate your conda environment *before* executing `python check_env.py`:
+1. To test your installation, please execute the `check_env.py` script in the python virtual environment where you have installed the requirements (from step 2 above).
+ 
+    If you created an Anaconda environment using the instructions above, you can use the same application window that you opened in step 1, or launch the platform specific application again -- Anaconda Prompt for Windows or Terminal.app for macOS.
+    Be sure to navigate to where you downloaded this GitHub repository and activate your conda environment *before* executing `python check_env.py`:
 
     ```
     # Example path to course materials (yours may differ)
@@ -60,9 +63,9 @@ If you are using Anaconda, you can use the Anaconda Prompt (Windows) or Terminal
     $ python check_env.py
     ```
 
-You should see a window pop up with a plot that looks vaguely like a smiley face (as shown below).
+    You should see a window pop up with a plot that looks vaguely like a smiley face (as shown below).
 
-![](assets/images/check_env_output.png)
+    ![](assets/images/check_env_output.png)
 
 ## Tutorial Materials
 
