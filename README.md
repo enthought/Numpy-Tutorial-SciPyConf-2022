@@ -35,16 +35,23 @@ If you are using Anaconda, you can use the Anaconda Prompt (Windows) or Terminal
     - **Windows**: Click Start and search for "Anaconda Prompt". Click on the application to launch a new Anaconda Prompt window.
     - **macOS**: Open Spotlight Search (using Cmd+Space) and type "Terminal.app". Click on the application to launch a new Terminal.app window.   
 
-2. Create a new Anaconda virtual environment by executing the below command in the application window you opened in step 1 above.
+1. Create a new Anaconda virtual environment by executing the below command in the application window you opened in step 1 above.
 
     ```
     $ conda create -n numpy-tutorial ipython jupyter matplotlib numpy pillow pyqt 
     ```
 
-3. To test your installation, please execute the `check_env.py` script in the environment where you have installed the requirements. If you created an Anaconda environment using the instructions above, keep the application window that you opened in step 1 active (or launch the platform specific application again -- Anaconda Prompt for Windows or Terminal.app for macOS), navigate to where you have this GitHub repository, and type:
+1. Download the materials from this GitHub repository by executing the below command. It will create a new folder named `Numpy-Tutorial-SciPyConf-2022/` with all the content you will need.
+
+    ```
+    $ git clone git@github.com:enthought/Numpy-Tutorial-SciPyConf-2022.git
+    ```
+
+1. To test your installation, please execute the `check_env.py` script in the python virtual environment where you have installed the requirements (from step 2 above). If you created an Anaconda environment using the instructions above, keep the application window that you opened in step 1 active (or launch the platform specific application again -- Anaconda Prompt for Windows or Terminal.app for macOS), navigate to where you downloaded this GitHub repository, and type:
 
     ```
     $ conda activate numpy-tutorial
+    $ cd Numpy-Tutorial-SciPyConf-2022/
     $ python check_env.py
     ```
 
