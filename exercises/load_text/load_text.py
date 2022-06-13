@@ -1,5 +1,5 @@
 """
-© 2001-2021, Enthought, Inc.
+© 2001-2022, Enthought, Inc.
 All Rights Reserved. Use only permitted under license. Copying, sharing, redistributing or other unauthorized use strictly prohibited.
 All trademarks and registered trademarks are the property of their respective owners.
 Enthought, Inc.
