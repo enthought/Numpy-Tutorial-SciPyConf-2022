@@ -23,7 +23,7 @@ If you don't already have a working python distribution, you may download Anacon
 To be able to run the examples, demos and exercises, you must have the following packages installed:
 
 - `ipython` (for running, experimenting, and doing exercises)
-- `jupyter` (for access to the Jupyter Notebook web-based interactive computing platform)
+- `jupyterlab` (for access to the Jupyter Notebook web-based interactive computing platform)
 - `matplotlib`
 - `numpy`
 - `pillow`
@@ -38,10 +38,10 @@ If you are using Anaconda, you can use the Anaconda Prompt (Windows) or Terminal
 1. Create a new Anaconda virtual environment by executing the below command in the application window you opened in step 1 above. You may be prompted to `Proceed([y]/n)?`. If so, type `y` and press `Enter`.
 
     ```
-    $ conda create -n numpy-tutorial ipython jupyter matplotlib numpy pillow pyqt 
+    $ conda create -n numpy-tutorial ipython jupyterlab matplotlib numpy pillow pyqt 
     ```
 
-1. Navigate to the directory where you'd like to store materials for this tutoiral and download the materials from this GitHub repository by executing the below command. It will create a new folder named `Numpy-Tutorial-SciPyConf-2022/` with all the content you will need.
+1. Navigate to the directory where you'd like to store materials for this tutorial and download the materials from this GitHub repository by executing the below command. It will create a new folder named `Numpy-Tutorial-SciPyConf-2022/` with all the content you will need.
 
     ```
     $ git clone git@github.com:enthought/Numpy-Tutorial-SciPyConf-2022.git
