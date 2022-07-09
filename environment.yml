@@ -1,7 +1,7 @@
 name: numpy-tutorial
 dependencies:
   - ipython
-  - jupyter
+  - jupyterlab
   - matplotlib
   - numpy
   - pillow
