@@ -69,6 +69,9 @@ print("The dow volume has been above 5.5 billion on" \
 # 3. Find the index of every row (or day) where the volume is greater
 #    than 5.5 billion. hint: look at the where() command.
 high_vol_index = np.where(high_volume_mask)[0]
+# high_vol_index2 = np.nonzero(high_volume_mask)[0]
+# np.array_equal(high_vol_index, high_vol_index2)
+
 
 # BONUS:
 # 1. Plot the adjusted close for EVERY day in 2008.
