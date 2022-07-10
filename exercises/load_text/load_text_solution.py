@@ -83,6 +83,24 @@ print(ary2)
 #############################################################################
 # 3. More complex example with comments and columns to skip
 #############################################################################
+def head(filename, n_lines=10, show_lines=False):
+    """
+    Print the first n_lines of a file.
+    Parameters
+    ----------
+    filename : str
+        The path to the file that should be parsed.
+    n_lines : int, default: 10
+        The number of lines to parse from the file.
+    show_lines : bool, default: False
+        Whether or not to show the line number of each parsed line.
+    """
+    with open(filename) as f:
+        for i, line in zip(range(n_lines), f):
+            print(i, line.strip()) if show_lines else print(line.strip())
+
+head("complex_data_file.txt")
+
 ary3 = loadtxt("complex_data_file.txt", delimiter=",", comments="%",
                usecols=(0, 1, 2, 4), dtype=int, skiprows=1)
 
