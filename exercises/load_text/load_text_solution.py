@@ -99,7 +99,7 @@ def head(filename, n_lines=10, show_lines=False):
         for i, line in zip(range(n_lines), f):
             print(i, line.strip()) if show_lines else print(line.strip())
 
-print(head("complex_data_file.txt"))
+head("complex_data_file.txt")
 
 ary3 = loadtxt("complex_data_file.txt", delimiter=",", comments="%",
                usecols=(0, 1, 2, 4), dtype=int, skiprows=1)
