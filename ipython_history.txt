@@ -1,0 +1,1217 @@
+>>> print('hello')
+>>> clear
+>>> # Intro to Numpy
+>>> # Numpy provides multi-dim arrays and mathematical ops
+>>> a = [1, 2, 3]
+>>> b = [2, 4, 6]
+>>> a + b
+[1, 2, 3, 2, 4, 6]
+>>> result = []
+>>> for val_a, val_b in zip(a, b):
+...     result.append(val_a + val_b)
+...
+>>> result
+[3, 6, 9]
+>>> [val_a + val_b for val_a, val_b in zip(a,b)]
+[3, 6, 9]
+>>> import numpy as np
+>>> np_a = np.array(a)
+>>> np_b = np.array(b)
+>>> np_a + np_b
+array([3, 6, 9])
+>>> np_a.dtype
+dtype('int64')
+>>> np_A
+>>> np_a
+array([1, 2, 3])
+>>> np_a[0] = 1.3456
+>>> np_a
+array([1, 2, 3])
+>>> np_a[0] = 13.3456
+>>> np_a
+array([13,  2,  3])
+>>> np.dtype
+numpy.dtype
+>>> np.dtype()
+>>> np_a.dtype()
+>>> np_a.dtype
+dtype('int64')
+>>> np_a
+array([13,  2,  3])
+>>> np_a = np.array([1, 2, 3], dtype='float')
+>>> np_a.dtype
+dtype('float64')
+>>> np_a[0] = 13.3456
+>>> np_a
+array([13.3456,  2.    ,  3.    ])
+>>> # Ufunc
+>>> np.sin(np_a)
+array([0.70273137, 0.90929743, 0.14112001])
+>>> np.cos(np_a)
+array([ 0.71145528, -0.41614684, -0.9899925 ])
+>>> type(np_a)
+numpy.ndarray
+>>> lol = [[1,2,3], [4,5,6]]
+>>> type(lol)
+list
+>>> np_array = np.array(lol)
+>>> lol
+[[1, 2, 3], [4, 5, 6]]
+>>> np_array
+array([[1, 2, 3],
+       [4, 5, 6]])
+>>> lol[1]
+[4, 5, 6]
+>>> lol[1][1]
+5
+>>> lol[1,1]
+>>> np_array[1,1]
+5
+>>> np_array[1][1]
+5
+>>> np_array = np.array(lol)
+>>> np_array.ndim
+2
+>>> np_array[1]
+array([4, 5, 6])
+>>> np_array[0]
+array([1, 2, 3])
+>>> np_array[0, :]
+array([1, 2, 3])
+>>> np_array[1, :]
+array([4, 5, 6])
+>>> clear
+>>> a = np.array([1, 2, 3])
+>>> a
+array([1, 2, 3])
+>>> type(a)
+numpy.ndarray
+>>> a = [1,2,3]
+>>> np.array(a)
+array([1, 2, 3])
+>>> type(a)
+list
+>>> a = np.array([1, 2, 3])
+>>> type(a)
+numpy.ndarray
+>>> a.dtype
+dtype('int64')
+>>> a = np.array([1.0, 2.0, 3.0])
+>>> a
+array([1., 2., 3.])
+>>> a.dtype
+dtype('float64')
+>>> type(1.0)
+float
+>>> type(1)
+int
+>>> type(1.)
+float
+>>> a = np.array([1,2,3])
+>>> a
+array([1, 2, 3])
+>>> b = np.array([1., 2., 3.])
+>>> b
+array([1., 2., 3.])
+>>> c = np.array([1, 2.0, 3])
+>>> c
+array([1., 2., 3.])
+>>> c.dtype
+dtype('float64')
+>>> # Numeric Tower
+>>> # Hierarcy
+>>> 1 + 1
+2
+>>> 1 + 2.0
+3.0
+>>> # Bool -> Int -> Float -> complex
+>>> a = np.array([0,1,2,3])
+>>> a
+array([0, 1, 2, 3])
+>>> a.dtype
+dtype('int64')
+>>> a.dim
+>>> a.ndim
+1
+>>> a.shape
+(4,)
+>>> a
+array([0, 1, 2, 3])
+>>> a.itemsize
+8
+>>> a.dtype
+dtype('int64')
+>>> # 8bit = 1 byte
+>>> # 64bit -> 8bytes
+>>> a.nbytes
+32
+>>> # 4 items each 8 bytes = 32 bytes
+>>> # slide 5
+>>> a
+array([0, 1, 2, 3])
+>>> range(4)
+range(0, 4)
+>>> list(range(4))
+[0, 1, 2, 3]
+>>> np.array(range(4))
+array([0, 1, 2, 3])
+>>> np.arange(4)
+array([0, 1, 2, 3])
+>>> np.arange(10, 2)
+array([], dtype=int64)
+>>> np.arange(10, step=2)
+array([0, 2, 4, 6, 8])
+>>> np.arange(start=10,end=20, step=2)
+>>> np.arange(start=10, stop=20, step=2)
+array([10, 12, 14, 16, 18])
+>>> np.arange(5)
+array([0, 1, 2, 3, 4])
+>>> np.arange(5.)
+array([0., 1., 2., 3., 4.])
+>>> # slide 6
+>>> a = np.array([1,2,3,4])
+>>> b = np.array([2,3,4,5])
+>>> a
+array([1, 2, 3, 4])
+>>> b
+array([2, 3, 4, 5])
+>>> a + b
+array([3, 5, 7, 9])
+>>> a * b
+array([ 2,  6, 12, 20])
+>>> a ** b
+array([   1,    8,   81, 1024])
+>>> x = np.array(11.0)
+>>> x
+array(11.)
+>>> x = np.arange(11.0)
+>>> x
+array([ 0.,  1.,  2.,  3.,  4.,  5.,  6.,  7.,  8.,  9., 10.])
+>>> # python is zero based index; "up to but not including" the stop value
+>>> x
+array([ 0.,  1.,  2.,  3.,  4.,  5.,  6.,  7.,  8.,  9., 10.])
+>>> np.pi
+3.141592653589793
+>>> np.e
+2.718281828459045
+>>> c = (2 * np.pi) / 10
+>>> c
+0.6283185307179586
+>>> x * c
+array([0.        , 0.62831853, 1.25663706, 1.88495559, 2.51327412,
+       3.14159265, 3.76991118, 4.39822972, 5.02654825, 5.65486678,
+       6.28318531])
+>>> # augmentation operation
+>>> # x = x * c
+>>> x *= c  # same as above
+>>> x
+array([0.        , 0.62831853, 1.25663706, 1.88495559, 2.51327412,
+       3.14159265, 3.76991118, 4.39822972, 5.02654825, 5.65486678,
+       6.28318531])
+>>> np.sin(x)
+array([ 0.00000000e+00,  5.87785252e-01,  9.51056516e-01,  9.51056516e-01,
+        5.87785252e-01,  1.22464680e-16, -5.87785252e-01, -9.51056516e-01,
+       -9.51056516e-01, -5.87785252e-01, -2.44929360e-16])
+>>> a = np.array([1,2,3])
+>>> a.dtype
+dtype('int64')
+>>> b = a.astype('float')
+>>> a.dtype
+dtype('int64')
+>>> b.dtype
+dtype('float64')
+>>> c = np.array([1, 2, 3], dtype='float')
+>>> c.dtype
+dtype('float64')
+>>> c = np.array([1, 2, 3], dtype=np.int32)
+>>> x
+array([0.        , 0.62831853, 1.25663706, 1.88495559, 2.51327412,
+       3.14159265, 3.76991118, 4.39822972, 5.02654825, 5.65486678,
+       6.28318531])
+>>> dc.dtype
+>>> c.dtype
+dtype('int32')
+>>> np.int32
+numpy.int32
+>>> np.int64
+numpy.int64
+>>> np.float32
+numpy.float32
+>>> np.float64
+numpy.float64
+>>> c = np.array([1, 2, 3], dtype='float')
+>>> c = np.array([1, 2, 3], dtype='float32')
+>>> c.dtype
+dtype('float32')
+>>> c = np.array([1, 2, 3], dtype=np.float64)
+>>> c.dtype
+dtype('float64')
+>>> clear
+>>> a = np.array(25)
+>>> a
+array(25)
+>>> a = np.arange(25)
+>>> a
+array([ 0,  1,  2,  3,  4,  5,  6,  7,  8,  9, 10, 11, 12, 13, 14, 15, 16,
+       17, 18, 19, 20, 21, 22, 23, 24])
+>>> a.ndim
+1
+>>> a = np.arange(24)
+>>> a
+array([ 0,  1,  2,  3,  4,  5,  6,  7,  8,  9, 10, 11, 12, 13, 14, 15, 16,
+       17, 18, 19, 20, 21, 22, 23])
+>>> a.ndim
+1
+>>> a.shape
+(24,)
+>>> b = a.reshape(6,4)
+>>> b
+array([[ 0,  1,  2,  3],
+       [ 4,  5,  6,  7],
+       [ 8,  9, 10, 11],
+       [12, 13, 14, 15],
+       [16, 17, 18, 19],
+       [20, 21, 22, 23]])
+>>> b.ndim
+2
+>>> d.shape
+>>> b.shape
+(6, 4)
+>>> a = np.aragne(5)
+>>> a = np.arange(5)
+>>> a
+array([0, 1, 2, 3, 4])
+>>> a.shape
+(5,)
+>>> a.reshape(1,5)
+array([[0, 1, 2, 3, 4]])
+>>> a
+array([0, 1, 2, 3, 4])
+>>> a.shape
+(5,)
+>>> a = a.reshape(1,5)
+>>> a.shape
+(1, 5)
+>>> a.ndim
+2
+>>> a
+array([[0, 1, 2, 3, 4]])
+>>> a = np.arange(5)
+>>> a
+array([0, 1, 2, 3, 4])
+>>> a.ndim
+1
+>>> a.sum(axis=0)
+10
+>>> a.sum(axis=1)
+>>> a.shape
+(5,)
+>>> a = a.reshape(1,5)
+>>> a.sum(axis=0)
+array([0, 1, 2, 3, 4])
+>>> a.sum(axis=1)
+array([10])
+>>> a
+array([[0, 1, 2, 3, 4]])
+>>> a.shape
+(1, 5)
+>>> clear
+>>> a = np.arange(1.0, 3.0, 0.5)
+>>> a
+array([1. , 1.5, 2. , 2.5])
+>>> a * np.pi
+array([3.14159265, 4.71238898, 6.28318531, 7.85398163])
+>>> a * np.pi * 1e8
+array([3.14159265e+08, 4.71238898e+08, 6.28318531e+08, 7.85398163e+08])
+>>> a * np.pi * 1e-6
+array([3.14159265e-06, 4.71238898e-06, 6.28318531e-06, 7.85398163e-06])
+>>> np.get_printoptions()
+{'edgeitems': 3,
+ 'threshold': 1000,
+ 'floatmode': 'maxprec',
+ 'precision': 8,
+ 'suppress': False,
+ 'linewidth': 75,
+ 'nanstr': 'nan',
+ 'infstr': 'inf',
+ 'sign': '-',
+ 'formatter': None,
+ 'legacy': False}
+>>> np.set_options(precision=2)
+>>> np.set_printoptions(precision=2)
+>>> a
+array([1. , 1.5, 2. , 2.5])
+>>> a * np.pi
+array([3.14, 4.71, 6.28, 7.85])
+>>> a * np.pi * 1e8
+array([3.14e+08, 4.71e+08, 6.28e+08, 7.85e+08])
+>>> a * np.pi * 1e-6
+array([3.14e-06, 4.71e-06, 6.28e-06, 7.85e-06])
+>>> np.set_printoptions(supress=True)
+>>> np.set_printoptions(suppress=True)
+>>> a * np.pi * 1e-6
+array([0., 0., 0., 0.])
+>>> np.set_printoptions(suppress=False)
+>>> np.set_printoptions(precision=8)
+>>> a * np.pi
+array([3.14159265, 4.71238898, 6.28318531, 7.85398163])
+>>> a * np.pi * 1e-6
+array([3.14159265e-06, 4.71238898e-06, 6.28318531e-06, 7.85398163e-06])
+>>> a
+array([1. , 1.5, 2. , 2.5])
+>>> a * np.pi * 1e-6
+array([3.14159265e-06, 4.71238898e-06, 6.28318531e-06, 7.85398163e-06])
+>>> with np.printoptions(precision=2):
+...     a * np.pi
+...
+>>> with np.printoptions(precision=2):
+...     print(a * np.pi)
+...
+>>> a * np.pi
+array([3.14159265, 4.71238898, 6.28318531, 7.85398163])
+>>> np.get_printoptions()
+{'edgeitems': 3,
+ 'threshold': 1000,
+ 'floatmode': 'maxprec',
+ 'precision': 8,
+ 'suppress': False,
+ 'linewidth': 75,
+ 'nanstr': 'nan',
+ 'infstr': 'inf',
+ 'sign': '-',
+ 'formatter': None,
+ 'legacy': False}
+>>> d = {'a': 1, 'b': 2, 'c':3 }
+>>> np.array(d)
+array({'a': 1, 'b': 2, 'c': 3}, dtype=object)
+>>> a = np.array(d)
+>>> a
+array({'a': 1, 'b': 2, 'c': 3}, dtype=object)
+>>> a.shape
+()
+>>> a[0]
+>>> a
+array({'a': 1, 'b': 2, 'c': 3}, dtype=object)
+>>> a[0]
+>>> a = np.array(d.keys())
+>>> a
+array(dict_keys(['a', 'b', 'c']), dtype=object)
+>>> a = np.array(d.values())
+>>> a
+array(dict_values([1, 2, 3]), dtype=object)
+>>> a = np.array(list(d.values()))
+>>> a
+array([1, 2, 3])
+>>> # slide 11
+>>> a = np.array([10, 11, 12, 13, 14])
+>>> a
+array([10, 11, 12, 13, 14])
+>>> #      0,  1,   2,  3,  4
+>>> a[4]
+14
+>>> a[2]
+12
+>>> a
+array([10, 11, 12, 13, 14])
+>>> #     -5, -4, -3, -2, -1
+>>> a[-1]
+14
+>>> a[-2]
+13
+>>> a[-3]
+12
+>>> a
+array([10, 11, 12, 13, 14])
+>>> clear
+>>> a
+array([10, 11, 12, 13, 14])
+>>> a[3]
+13
+>>> a[-2]
+13
+>>> a[-1]
+14
+>>> a[4]
+14
+>>> a
+array([10, 11, 12, 13, 14])
+>>> a[::-1]
+array([14, 13, 12, 11, 10])
+>>> clear
+>>> a
+array([10, 11, 12, 13, 14])
+>>> a[::-1]
+array([14, 13, 12, 11, 10])
+>>> a[1:3]
+array([11, 12])
+>>> a[1:-2]
+array([11, 12])
+>>> a[-4:3]
+array([11, 12])
+>>> a[-3:4]
+array([12, 13])
+>>> a[-3:-4]
+array([], dtype=int64)
+>>> a[-3:-4:-1]
+array([12])
+>>> a
+array([10, 11, 12, 13, 14])
+>>> a[2:]
+array([12, 13, 14])
+>>> a
+array([10, 11, 12, 13, 14])
+>>> a[::2]
+array([10, 12, 14])
+>>> a = np.arange(5)
+>>> a
+array([0, 1, 2, 3, 4])
+>>> a[-2:]
+array([3, 4])
+>>> a[-2:] = [-42, -42]
+>>> a
+array([  0,   1,   2, -42, -42])
+>>> a[-2:] = [1, 2, 3]
+>>> a
+array([  0,   1,   2, -42, -42])
+>>> a[-2:] = 99
+>>> a
+array([ 0,  1,  2, 99, 99])
+>>> a = np.arange(25)
+>>> a
+array([ 0,  1,  2,  3,  4,  5,  6,  7,  8,  9, 10, 11, 12, 13, 14, 15, 16,
+       17, 18, 19, 20, 21, 22, 23, 24])
+>>> a = np.arange(25).reshape(5,5)
+>>> a
+array([[ 0,  1,  2,  3,  4],
+       [ 5,  6,  7,  8,  9],
+       [10, 11, 12, 13, 14],
+       [15, 16, 17, 18, 19],
+       [20, 21, 22, 23, 24]])
+>>> clear
+>>> # orange
+>>> a
+array([[ 0,  1,  2,  3,  4],
+       [ 5,  6,  7,  8,  9],
+       [10, 11, 12, 13, 14],
+       [15, 16, 17, 18, 19],
+       [20, 21, 22, 23, 24]])
+>>> a.shape
+(5, 5)
+>>> a[4]
+array([20, 21, 22, 23, 24])
+>>> a[-1]
+array([20, 21, 22, 23, 24])
+>>> a[-1, :]
+array([20, 21, 22, 23, 24])
+>>> a[4, :]
+array([20, 21, 22, 23, 24])
+>>> a.ndim
+2
+>>> clear
+>>> a[-1, :]
+array([20, 21, 22, 23, 24])
+>>> a = np.arange(10)
+>>> a[-1]
+9
+>>> a = np.arange(25).reshape(5,5)
+>>> a[-1]
+array([20, 21, 22, 23, 24])
+>>> # red
+>>> clear
+>>> a
+array([[ 0,  1,  2,  3,  4],
+       [ 5,  6,  7,  8,  9],
+       [10, 11, 12, 13, 14],
+       [15, 16, 17, 18, 19],
+       [20, 21, 22, 23, 24]])
+>>> a[  :  , ::2  ]
+array([[ 0,  2,  4],
+       [ 5,  7,  9],
+       [10, 12, 14],
+       [15, 17, 19],
+       [20, 22, 24]])
+>>> a[  :  , 1::2  ]
+array([[ 1,  3],
+       [ 6,  8],
+       [11, 13],
+       [16, 18],
+       [21, 23]])
+>>> a[  :  , 1:4:2  ]
+array([[ 1,  3],
+       [ 6,  8],
+       [11, 13],
+       [16, 18],
+       [21, 23]])
+>>> a[  :  , 1::2  ]
+array([[ 1,  3],
+       [ 6,  8],
+       [11, 13],
+       [16, 18],
+       [21, 23]])
+>>> a[ ::2  ,    ]
+array([[ 0,  1,  2,  3,  4],
+       [10, 11, 12, 13, 14],
+       [20, 21, 22, 23, 24]])
+>>> a[ 1::2  ,    ]
+array([[ 5,  6,  7,  8,  9],
+       [15, 16, 17, 18, 19]])
+>>> a[ 1::2  , ::2   ]
+array([[ 5,  7,  9],
+       [15, 17, 19]])
+>>> a[ 1::2  , :-1:2   ]
+array([[ 5,  7],
+       [15, 17]])
+>>> a[ 1::2  , :4:2   ]
+array([[ 5,  7],
+       [15, 17]])
+>>> a[ 1::2  , 0:4:2   ]
+array([[ 5,  7],
+       [15, 17]])
+>>> clear
+>>> # Slide 15
+>>> a = np.array([1,2,3,4])
+>>> a
+array([1, 2, 3, 4])
+>>> b = a[2:4]
+>>> b
+array([3, 4])
+>>> b[0] = 99
+>>> b
+array([99,  4])
+>>> a
+array([ 1,  2, 99,  4])
+>>> np.shares_memory(a, b)
+True
+>>> c = a[2:4].copy()
+>>> c
+array([99,  4])
+>>> a = np.array([1,2,3,4])
+>>> c = a[2:4].copy()
+>>> c
+array([3, 4])
+>>> a
+array([1, 2, 3, 4])
+>>> c[0] == 9
+False
+>>> c[0] = 99
+>>> c
+array([99,  4])
+>>> a
+array([1, 2, 3, 4])
+>>> np.shares_memory(a, c)
+False
+>>> # facny indexing will always create a copy
+>>> a
+array([1, 2, 3, 4])
+>>> a>3
+array([False, False, False,  True])
+>>> a[a>3]
+array([4])
+>>> a
+array([1, 2, 3, 4])
+>>> a[[1,2]]
+array([2, 3])
+>>> d = a[[1,2]]
+>>> d
+array([2, 3])
+>>> a
+array([1, 2, 3, 4])
+>>> np.shares_memory(a, d)
+False
+>>> e = a[a>3]
+>>> e
+array([4])
+>>> np.shares_memory(a, e)
+False
+>>> #slide 16
+>>> a  = np.arange(0,80,10)
+>>> a
+array([ 0, 10, 20, 30, 40, 50, 60, 70])
+>>> indices = [1, 2, -3]
+>>> a[indices]
+array([10, 20, 50])
+>>> a[::2]
+array([ 0, 20, 40, 60])
+>>> a[1::2]
+array([10, 30, 50, 70])
+>>> a[[1, 2, -3]]
+array([10, 20, 50])
+>>> a
+array([ 0, 10, 20, 30, 40, 50, 60, 70])
+>>> a[[1, 2, -3]] = 99
+>>> a
+array([ 0, 99, 99, 30, 40, 99, 60, 70])
+>>> # fancy indexing (1) indices as a list
+>>> mask = np.array([1,0,1,0], dtype=bool)
+>>> mask
+array([ True, False,  True, False])
+>>> a[mask]
+>>> mask = np.array([1,0,1,0,1], dtype=bool)
+>>> mask
+array([ True, False,  True, False,  True])
+>>> a[mask]
+>>> a
+array([ 0, 99, 99, 30, 40, 99, 60, 70])
+>>> mask = np.array([1,0,1,0,1,0,0,0], dtype=bool)
+>>> a[mask]
+array([ 0, 99, 40])
+>>> clear
+>>> a
+array([ 0, 99, 99, 30, 40, 99, 60, 70])
+>>> mask
+array([ True, False,  True, False,  True, False, False, False])
+>>> a[mask]
+array([ 0, 99, 40])
+>>> mask = np.array([1,0,1,0,1,0,0,0], dtype=bool)
+>>> mask
+array([ True, False,  True, False,  True, False, False, False])
+>>> a
+array([ 0, 99, 99, 30, 40, 99, 60, 70])
+>>> a > 20
+array([False,  True,  True,  True,  True,  True,  True,  True])
+>>> mask = a > 20
+>>> a[ask]
+>>> a[mask]
+array([99, 99, 30, 40, 99, 60, 70])
+>>> a[a>20]
+array([99, 99, 30, 40, 99, 60, 70])
+>>> a
+array([ 0, 99, 99, 30, 40, 99, 60, 70])
+>>> a > 20
+array([False,  True,  True,  True,  True,  True,  True,  True])
+>>> mask = _
+>>> mask
+array([False,  True,  True,  True,  True,  True,  True,  True])
+>>> a[mask]
+array([99, 99, 30, 40, 99, 60, 70])
+>>> a[ a > 20 ]
+array([99, 99, 30, 40, 99, 60, 70])
+>>> 5
+5
+>>> _
+5
+>>> _ + 5
+10
+>>> _ + 5
+15
+>>> _ + 5
+20
+>>> _ + 5
+25
+>>> a > 20
+array([False,  True,  True,  True,  True,  True,  True,  True])
+>>> mask = _
+>>> mask = a > 20
+>>> a
+array([ 0, 99, 99, 30, 40, 99, 60, 70])
+>>> a == 0
+array([ True, False, False, False, False, False, False, False])
+>>> a
+array([ 0, 99, 99, 30, 40, 99, 60, 70])
+>>> b = np.array([0])
+>>> a == b
+array([ True, False, False, False, False, False, False, False])
+>>> a
+array([ 0, 99, 99, 30, 40, 99, 60, 70])
+>>> b
+array([0])
+>>> a == 0
+array([ True, False, False, False, False, False, False, False])
+>>> a
+array([ 0, 99, 99, 30, 40, 99, 60, 70])
+>>> a > 5-
+>>> a > 50
+array([False,  True,  True, False, False,  True,  True,  True])
+>>> 20 < a < 50
+>>> (20 < a) & (a< 50)
+array([False, False, False,  True,  True, False, False, False])
+>>> (20 < a) and (a< 50)
+>>> a = np.arange(6).reshape(1,6) + np.arange(60, step=10)
+>>> a
+array([[ 0, 11, 22, 33, 44, 55]])
+>>> np.arange(6)
+array([0, 1, 2, 3, 4, 5])
+>>> np.arange(6) + np.arange(0,60,step=10)
+array([ 0, 11, 22, 33, 44, 55])
+>>> np.arange(6).reshape(6,1) + np.arange(0,60,step=10)
+array([[ 0, 10, 20, 30, 40, 50],
+       [ 1, 11, 21, 31, 41, 51],
+       [ 2, 12, 22, 32, 42, 52],
+       [ 3, 13, 23, 33, 43, 53],
+       [ 4, 14, 24, 34, 44, 54],
+       [ 5, 15, 25, 35, 45, 55]])
+>>> np.arange(6) + np.arange(0,60,step=10).reshape(-1,1)
+array([[ 0,  1,  2,  3,  4,  5],
+       [10, 11, 12, 13, 14, 15],
+       [20, 21, 22, 23, 24, 25],
+       [30, 31, 32, 33, 34, 35],
+       [40, 41, 42, 43, 44, 45],
+       [50, 51, 52, 53, 54, 55]])
+>>> a = np.arange(6) + np.arange(0,60,step=10).reshape(-1,1)
+>>> a
+array([[ 0,  1,  2,  3,  4,  5],
+       [10, 11, 12, 13, 14, 15],
+       [20, 21, 22, 23, 24, 25],
+       [30, 31, 32, 33, 34, 35],
+       [40, 41, 42, 43, 44, 45],
+       [50, 51, 52, 53, 54, 55]])
+>>> rows = [0, 1, 2, 3, 4]
+>>> cols = [1, 2, 3, 4, 5]
+>>> list(zip(row, cols))
+>>> list(zip(rows, cols))
+[(0, 1), (1, 2), (2, 3), (3, 4), (4, 5)]
+>>> a
+array([[ 0,  1,  2,  3,  4,  5],
+       [10, 11, 12, 13, 14, 15],
+       [20, 21, 22, 23, 24, 25],
+       [30, 31, 32, 33, 34, 35],
+       [40, 41, 42, 43, 44, 45],
+       [50, 51, 52, 53, 54, 55]])
+>>> row
+>>> rows
+[0, 1, 2, 3, 4]
+>>> cols
+[1, 2, 3, 4, 5]
+>>> list(zip(rows, cols))
+[(0, 1), (1, 2), (2, 3), (3, 4), (4, 5)]
+>>> zz
+>>> a
+array([[ 0,  1,  2,  3,  4,  5],
+       [10, 11, 12, 13, 14, 15],
+       [20, 21, 22, 23, 24, 25],
+       [30, 31, 32, 33, 34, 35],
+       [40, 41, 42, 43, 44, 45],
+       [50, 51, 52, 53, 54, 55]])
+>>> clear
+>>> rows
+[0, 1, 2, 3, 4]
+>>> cols
+[1, 2, 3, 4, 5]
+>>> list(zip(rows, cols))
+[(0, 1), (1, 2), (2, 3), (3, 4), (4, 5)]
+>>> a
+array([[ 0,  1,  2,  3,  4,  5],
+       [10, 11, 12, 13, 14, 15],
+       [20, 21, 22, 23, 24, 25],
+       [30, 31, 32, 33, 34, 35],
+       [40, 41, 42, 43, 44, 45],
+       [50, 51, 52, 53, 54, 55]])
+>>> np.diagonal(a)
+array([ 0, 11, 22, 33, 44, 55])
+>>> np.diagonal(a, offset=1)
+array([ 1, 12, 23, 34, 45])
+>>> #  modulo
+>>> 25%5
+0
+>>> 25$4
+>>> 25%4
+1
+>>> divmod(25,4)
+(6, 1)
+>>> a[rows, cols]
+array([ 1, 12, 23, 34, 45])
+>>> clear
+>>> # slide 18 review
+>>> a = np.arange(25).reshape(5,5)
+>>> a
+array([[ 0,  1,  2,  3,  4],
+       [ 5,  6,  7,  8,  9],
+       [10, 11, 12, 13, 14],
+       [15, 16, 17, 18, 19],
+       [20, 21, 22, 23, 24]])
+>>> # Blue left to right (10, 6, 3, 19)
+>>> rows = [2, 1, 0, 3]
+>>> cols = [0,1, 3,4]
+>>> a[row, cols]
+>>> a[rows, cols]
+array([10,  6,  3, 19])
+>>> a%3
+array([[0, 1, 2, 0, 1],
+       [2, 0, 1, 2, 0],
+       [1, 2, 0, 1, 2],
+       [0, 1, 2, 0, 1],
+       [2, 0, 1, 2, 0]])
+>>> mask = a%3 == 0
+>>> a[mask]
+array([ 0,  3,  6,  9, 12, 15, 18, 21, 24])
+>>> a[a%3==0]
+array([ 0,  3,  6,  9, 12, 15, 18, 21, 24])
+>>> np.where(a%3==0)
+(array([0, 0, 1, 1, 2, 3, 3, 4, 4]), array([0, 3, 1, 4, 2, 0, 3, 1, 4]))
+>>> np.where(a%3==0, 1, 0)
+array([[1, 0, 0, 1, 0],
+       [0, 1, 0, 0, 1],
+       [0, 0, 1, 0, 0],
+       [1, 0, 0, 1, 0],
+       [0, 1, 0, 0, 1]])
+>>> np.where(a%3==0, 99, 13)
+array([[99, 13, 13, 99, 13],
+       [13, 99, 13, 13, 99],
+       [13, 13, 99, 13, 13],
+       [99, 13, 13, 99, 13],
+       [13, 99, 13, 13, 99]])
+>>> a[a%3==0]
+array([ 0,  3,  6,  9, 12, 15, 18, 21, 24])
+>>> a
+array([[ 0,  1,  2,  3,  4],
+       [ 5,  6,  7,  8,  9],
+       [10, 11, 12, 13, 14],
+       [15, 16, 17, 18, 19],
+       [20, 21, 22, 23, 24]])
+>>> # Blue left to right (10, 6, 3, 19)
+>>> a in [10, 6, 3, 19]
+>>> a in np.array([10, 6, 3, 19])
+False
+>>> a
+array([[ 0,  1,  2,  3,  4],
+       [ 5,  6,  7,  8,  9],
+       [10, 11, 12, 13, 14],
+       [15, 16, 17, 18, 19],
+       [20, 21, 22, 23, 24]])
+>>> a
+array([[ 0,  1,  2,  3,  4],
+       [ 5,  6,  7,  8,  9],
+       [10, 11, 12, 13, 14],
+       [15, 16, 17, 18, 19],
+       [20, 21, 22, 23, 24]])
+>>> a == 10
+array([[False, False, False, False, False],
+       [False, False, False, False, False],
+       [ True, False, False, False, False],
+       [False, False, False, False, False],
+       [False, False, False, False, False]])
+>>> np.any(a == [10, 6, 9])
+False
+>>> a
+array([[ 0,  1,  2,  3,  4],
+       [ 5,  6,  7,  8,  9],
+       [10, 11, 12, 13, 14],
+       [15, 16, 17, 18, 19],
+       [20, 21, 22, 23, 24]])
+>>> (a==9) | (a==10)
+array([[False, False, False, False, False],
+       [False, False, False, False,  True],
+       [ True, False, False, False, False],
+       [False, False, False, False, False],
+       [False, False, False, False, False]])
+>>> # Blue left to right (10, 6, 3, 19)
+>>> a in [10, 6, 3, 19]
+>>> (a==10) | (a==6)
+array([[False, False, False, False, False],
+       [False,  True, False, False, False],
+       [ True, False, False, False, False],
+       [False, False, False, False, False],
+       [False, False, False, False, False]])
+>>> a
+array([[ 0,  1,  2,  3,  4],
+       [ 5,  6,  7,  8,  9],
+       [10, 11, 12, 13, 14],
+       [15, 16, 17, 18, 19],
+       [20, 21, 22, 23, 24]])
+>>> a.__contains__
+<method-wrapper '__contains__' of numpy.ndarray object at 0x7f92c799bab0>
+>>> a.__contains__()
+>>> a.__contains__(10)
+True
+>>> a.__contains__((10,6))
+False
+>>> a
+array([[ 0,  1,  2,  3,  4],
+       [ 5,  6,  7,  8,  9],
+       [10, 11, 12, 13, 14],
+       [15, 16, 17, 18, 19],
+       [20, 21, 22, 23, 24]])
+>>> (a==10) | (a==6)
+array([[False, False, False, False, False],
+       [False,  True, False, False, False],
+       [ True, False, False, False, False],
+       [False, False, False, False, False],
+       [False, False, False, False, False]])
+>>> np.any(a[:, 0] == 10)
+True
+>>> np.searchsorted>
+>>> np.searchsorted?
+>>> a.searchsorted(10)
+>>> np.searchsorted(a,10)
+>>> np.searchsorted(a,np.array([10]))
+>>> a
+array([[ 0,  1,  2,  3,  4],
+       [ 5,  6,  7,  8,  9],
+       [10, 11, 12, 13, 14],
+       [15, 16, 17, 18, 19],
+       [20, 21, 22, 23, 24]])
+>>> b=a.flatten()
+>>> b
+array([ 0,  1,  2,  3,  4,  5,  6,  7,  8,  9, 10, 11, 12, 13, 14, 15, 16,
+       17, 18, 19, 20, 21, 22, 23, 24])
+>>> b.searchsorted([3,5,7])
+array([3, 5, 7])
+>>> b[b.searchsorted([3,5,7])]
+array([3, 5, 7])
+>>> b[b.searchsorted([3,5,7])] == [3, 5, 7]
+array([ True,  True,  True])
+>>> a = np.arange(24).reshape(6,4)
+>>> clear
+>>> a
+array([[ 0,  1,  2,  3],
+       [ 4,  5,  6,  7],
+       [ 8,  9, 10, 11],
+       [12, 13, 14, 15],
+       [16, 17, 18, 19],
+       [20, 21, 22, 23]])
+>>> a.sum()
+276
+>>> np.sum(a)
+276
+>>> a.sum(axis=0)
+array([60, 66, 72, 78])
+>>> a.sum(axis=1)
+array([ 6, 22, 38, 54, 70, 86])
+>>> a.shape
+(6, 4)
+>>> # the axis that you specify will "disappear" in the reduction
+>>> a.sum(axis=0).shape
+(4,)
+>>> a.sum(axis=1).shape
+(6,)
+>>> a = np.array([1, 2, np.nan, 4])
+>>> a.sum()
+nan
+>>> a.mean()
+nan
+>>> np.nansum(a)
+7.0
+>>> np.nanmean(a)
+2.3333333333333335
+>>> (1+2+4) / 3
+2.3333333333333335
+>>> (1+2+4) / 4
+1.75
+>>> a
+array([ 1.,  2., nan,  4.])
+>>> a.sum()
+nan
+>>> a.nansum()
+>>> np.nansum(a)
+7.0
+>>> clear
+>>> # slide 29
+>>> a = np.array([[2,3],[0,1]])
+>>> a
+array([[2, 3],
+       [0, 1]])
+>>> a.min()
+0
+>>> a.min(axis=1)
+array([2, 0])
+>>> a.min(axis=0)
+array([0, 1])
+>>> a.argmax()
+1
+>>> a.flatten()
+array([2, 3, 0, 1])
+>>> np.unravel_index(a.argmax(), a.shape)
+(0, 1)
+>>> a
+array([[2, 3],
+       [0, 1]])
+>>> a
+array([[2, 3],
+       [0, 1]])
+>>> a = np.arange(-2, 2) **2
+>>> # slide 30
+>>> a
+array([4, 1, 0, 1])
+>>> mask = a %2 ==0
+>>> mask
+array([ True, False,  True, False])
+>>> a.where(mask)
+>>> np.where(mask)
+(array([0, 2]),)
+>>> a
+array([4, 1, 0, 1])
+>>> mask
+array([ True, False,  True, False])
+>>> clear
+>>> mask
+array([ True, False,  True, False])
+>>> np.where(mask)
+(array([0, 2]),)
+>>> a
+array([4, 1, 0, 1])
+>>> a = np.array([[2,3],[0,1]])
+>>> a
+array([[2, 3],
+       [0, 1]])
+>>> np.where(a<2)
+(array([1, 1]), array([0, 1]))
+>>> a = np.arange(25).reshap(5,5)
+>>> a = np.arange(25).reshape(5,5)
+>>> a
+array([[ 0,  1,  2,  3,  4],
+       [ 5,  6,  7,  8,  9],
+       [10, 11, 12, 13, 14],
+       [15, 16, 17, 18, 19],
+       [20, 21, 22, 23, 24]])
+>>> np.where(a%5==0)
+(array([0, 1, 2, 3, 4]), array([0, 0, 0, 0, 0]))
+>>> np.where(a%5==0, 1, 0)
+array([[1, 0, 0, 0, 0],
+       [1, 0, 0, 0, 0],
+       [1, 0, 0, 0, 0],
+       [1, 0, 0, 0, 0],
+       [1, 0, 0, 0, 0]])
+>>> a = np.array([[1,2,3],[4,5,6]])
+>>> a
+array([[1, 2, 3],
+       [4, 5, 6]])
+>>> a.mean(axis=0)
+array([2.5, 3.5, 4.5])
+>>> a.mean(axis=1)
+array([2., 5.])
+>>> a.std(axis=1)
+array([0.81649658, 0.81649658])
+>>> a.var(axis=1)
+array([0.66666667, 0.66666667])
+>>> a.std(axis=1) ** 2
+array([0.66666667, 0.66666667])
+>>> a.var?
+>>> a = np.arange(-15, 15).reshape(5, 6) ** 2
+>>> a
+array([[225, 196, 169, 144, 121, 100],
+       [ 81,  64,  49,  36,  25,  16],
+       [  9,   4,   1,   0,   1,   4],
+       [  9,  16,  25,  36,  49,  64],
+       [ 81, 100, 121, 144, 169, 196]])
+>>> clear
+>>> a
+array([[225, 196, 169, 144, 121, 100],
+       [ 81,  64,  49,  36,  25,  16],
+       [  9,   4,   1,   0,   1,   4],
+       [  9,  16,  25,  36,  49,  64],
+       [ 81, 100, 121, 144, 169, 196]])
+>>> a.shape
+(5, 6)
+>>> a.max(axis=1)
+array([225,  81,   9,  64, 196])
+>>> a.max(axis=0).shape
+(6,)
+>>> a.max(axis=1).shape
+(5,)
+>>> a.mean(axis=0)
+array([81., 76., 73., 72., 73., 76.])
+>>> # option 1
+>>> np.argmin(a)
+15
+>>> a.flatten()
+array([225, 196, 169, 144, 121, 100,  81,  64,  49,  36,  25,  16,   9,
+         4,   1,   0,   1,   4,   9,  16,  25,  36,  49,  64,  81, 100,
+       121, 144, 169, 196])
+>>> np.unravel_index(a.argmin(), a.shape)
+(2, 3)
+>>> a
+array([[225, 196, 169, 144, 121, 100],
+       [ 81,  64,  49,  36,  25,  16],
+       [  9,   4,   1,   0,   1,   4],
+       [  9,  16,  25,  36,  49,  64],
+       [ 81, 100, 121, 144, 169, 196]])
+>>> # option 2
+>>> np.where(a == 0)
+(array([2]), array([3]))
+>>> np.where(a == np.min())
+>>> np.where(a == a.min())
+(array([2]), array([3]))
+>>> a
+array([[225, 196, 169, 144, 121, 100],
+       [ 81,  64,  49,  36,  25,  16],
+       [  9,   4,   1,   0,   1,   4],
+       [  9,  16,  25,  36,  49,  64],
+       [ 81, 100, 121, 144, 169, 196]])
+>>> a.min(axis=1)
+array([100,  16,   0,   9,  81])
+>>> a.min(axis=1).argmin()
+2
+>>> a.min(axis=0).argmin()
+3
+>>> a[0,0] = 0
+>>> a
+array([[  0, 196, 169, 144, 121, 100],
+       [ 81,  64,  49,  36,  25,  16],
+       [  9,   4,   1,   0,   1,   4],
+       [  9,  16,  25,  36,  49,  64],
+       [ 81, 100, 121, 144, 169, 196]])
+>>> np.unravel_index(a.argmin(), a.shape)
+(0, 0)
+>>> np.where(a == a.min())
+(array([0, 2]), array([0, 3]))
+>>> a.min(axis=0).argmin()
+0
+>>> a.min(axis=1).argmin()
+0
+>>> # slide 37
+>>> a = np.array([0, 10, 20, 30])
+>>> b = np.array([0, 1, 2])
+>>> a.shape
+(4,)
+>>> b.shape
+(3,)
+>>> b.reshape(1,3)
+array([[0, 1, 2]])
+>>> b[np.newaxis, :]
+array([[0, 1, 2]])
+>>> a + b
+>>> a.shape
+(4,)
+>>> b.shape
+(3,)
+>>> b = b[np.newaxis, :]
+>>> b.shape
+(1, 3)
+>>> a + b
+>>> b = b[:, np.newaxis]
+>>> a
+array([ 0, 10, 20, 30])
+>>> b
+array([[[0, 1, 2]]])
+>>> a+b
+>>> b = np.array([0, 1, 2])
+>>> b = b[:, np.newaxis]
+>>> a + b
+array([[ 0, 10, 20, 30],
+       [ 1, 11, 21, 31],
+       [ 2, 12, 22, 32]])
+>>> a
+array([ 0, 10, 20, 30])
+>>> b
+array([[0],
+       [1],
+       [2]])
+>>> a+b
+array([[ 0, 10, 20, 30],
+       [ 1, 11, 21, 31],
+       [ 2, 12, 22, 32]])
+>>> c = a+b
+>>> c.shape
+(3, 4)
+>>> a.shape
+(4,)
+>>> b.shape
+(3, 1)
+>>> a = np.array([0, 10, 20, 30])
+>>> b = np.array([0, 1, 2])
+>>> y = a[np.newaxis, :] + b
+>>> y = a[:, np.newaxis] + b
+>>> y
+array([[ 0,  1,  2],
+       [10, 11, 12],
+       [20, 21, 22],
+       [30, 31, 32]])
+>>> a[:, np.newaxis]
+array([[ 0],
+       [10],
+       [20],
+       [30]])
+>>> a
+array([ 0, 10, 20, 30])
+>>> ls
+>>> %history -pof ipython_out.txt
