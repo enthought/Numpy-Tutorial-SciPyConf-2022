@@ -1,6 +1,7 @@
 # SciPy 2022 Tutorial: Introduction to Numerical Computing With NumPy
 
 #### Presented by: Logan Thomas, [Enthought, Inc.](https://www.enthought.com)
+#### YouTube recording of live tutorial [here](https://youtu.be/bveHFn0G4Zg)
 
 This repository contains all the material needed by students registered for the Numpy tutorial of [SciPy 2022](https://www.scipy2022.scipy.org/) on Monday, July 11th 2022.
 
